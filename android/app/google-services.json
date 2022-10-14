@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "628808662322",
+    "project_id": "vidapp-31cff",
+    "storage_bucket": "vidapp-31cff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628808662322:android:744ca7cdbda526ae48eb2b",
+        "android_client_info": {
+          "package_name": "com.example.cred"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628808662322-j88cjdcj5ch706c8h2akpf46kv0udmhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnbv-HZ7aXWbYqr3RaiiPyXANZ7pJ5OQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628808662322-j88cjdcj5ch706c8h2akpf46kv0udmhq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628808662322:android:965276e6c806822648eb2b",
+        "android_client_info": {
+          "package_name": "com.example.vid_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628808662322-j88cjdcj5ch706c8h2akpf46kv0udmhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnbv-HZ7aXWbYqr3RaiiPyXANZ7pJ5OQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628808662322-j88cjdcj5ch706c8h2akpf46kv0udmhq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
