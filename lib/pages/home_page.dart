@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cred/auth.dart';
+import 'package:cred/home_screen.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final User? user = Auth().currentUser;
+
+  // BuildContext? get context => null;
 
   Future<void> signOut() async {
     await Auth().signOut();
@@ -14,6 +17,16 @@ class HomePage extends StatelessWidget {
   Widget _title() {
     return const Text('Firebase Auth');
   }
+
+  // Widget _libraryButton() {
+  //   return ElevatedButton(
+  //     onPressed: () {
+  //       Navigator.of(context!)
+  //           .push(MaterialPageRoute(builder: (context) => const HomeScreen()));
+  //     },
+  //     child: const Text('Library'),
+  //   );
+  // }
 
   Widget _signOutButton() {
     return ElevatedButton(
@@ -40,6 +53,14 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            // _libraryButton(),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const HomeScreen()));
+              },
+              child: const Text('Library'),
+            ),
             // _libraryButton(),
             _userUid(),
             _signOutButton(),
