@@ -59,7 +59,11 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _errorMessage() {
-    return Text(errorMessage == '' ? '' : 'Humm ? $errorMessage');
+    Padding(padding: EdgeInsets.only(top: 10));
+    return Text(
+      errorMessage == '' ? '' : 'Error! $errorMessage',
+      style: TextStyle(),
+    );
   }
 
   Widget _submitButton() {
