@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _title() {
-    return const Text('Firebase Auth');
+    return const Text('Home');
   }
 
   // Widget _libraryButton() {
@@ -36,7 +36,12 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _userUid() {
-    return Text(user?.email ?? 'User email');
+    return Text(user?.email ?? 'User email',
+        style: const TextStyle(
+          color: Colors.black,
+          // backgroundColor: Colors.lightBlueAccent,
+          fontSize: 25,
+        ));
   }
 
   @override
@@ -46,24 +51,49 @@ class HomePage extends StatelessWidget {
         title: _title(),
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        padding: const EdgeInsets.all(20),
+        // height: double.infinity,
+        // width: double.infinity,
+        padding: const EdgeInsets.all(10),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          // mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             // _libraryButton(),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const HomeScreen()));
-              },
-              child: const Text('Library'),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _userUid(),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
+                      },
+                      child: const Text('Library'),
+                    ),
+                  ],
+                ),
+                // _libraryButton(),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    _signOutButton(),
+                  ],
+                ),
+              ],
             ),
-            // _libraryButton(),
-            _userUid(),
-            _signOutButton(),
           ],
         ),
       ),

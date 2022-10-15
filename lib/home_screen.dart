@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.blueGrey[100],
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text('Flutter Video Player Demo'),
+        title: const Text('Video Library'),
         centerTitle: true,
       ),
       body: ListView(
@@ -28,24 +28,28 @@ class HomeScreen extends StatelessWidget {
                 'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4'),
             looping: false,
             autoplay: true,
+            aspectRatio: 9 / 16,
           ),
           VideoItems(
             videoPlayerController: VideoPlayerController.network(
                 'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4'),
             looping: false,
             autoplay: true,
+            aspectRatio: 16 / 9,
           ),
           VideoItems(
             videoPlayerController: VideoPlayerController.network(
                 'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4'),
             looping: false,
             autoplay: true,
+            aspectRatio: 9 / 16,
           ),
           VideoItems(
             videoPlayerController: VideoPlayerController.network(
                 'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4'),
             looping: false,
             autoplay: true,
+            aspectRatio: 9 / 16,
           ),
           // VideoItems(
           //   videoPlayerController: VideoPlayerController.asset(
