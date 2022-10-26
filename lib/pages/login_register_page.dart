@@ -59,10 +59,8 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _errorMessage() {
-    Padding(padding: EdgeInsets.only(top: 10));
     return Text(
       errorMessage == '' ? '' : 'Error! $errorMessage',
-      style: TextStyle(),
     );
   }
 
